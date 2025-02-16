@@ -247,10 +247,21 @@ footer{
 
 .flex-wrapper.reservation-wrapper{
     height: 100%;
+    max-width: 1200px;
     gap: 1vh;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    background-color: #0000007D;
+    border-radius: 10px;
+}
+
+.flex-wrapper.reservation-wrapper > button {
+    border: 2px solid white;
+    border-radius: 5px;
+    padding: 1vh;
+    font-size: 1.5rem;
 }
 
 footer > p{
