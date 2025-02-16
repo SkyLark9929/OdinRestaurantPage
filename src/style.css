@@ -64,19 +64,36 @@ table {
     src: url(Primitive.ttf);
 }
 
-@font-face {
-    font-family: Monarchia;
-    src: url(MONARCHI.TTF);
-}
-
 h1{
     font-family: Primitive;
     font-size: 4rem;
 }
 
-p{
+h2{
     font-family: Primitive;
-    font-size: 2rem;
+    font-size: 3rem;
+}
+
+p, li{
+    font-family: Primitive;
+    font-size: 1.5rem;
+}
+
+li{
+    margin: 2vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 2vh;
+}
+
+footer{
+    background-color: var(--eerie-black);
+    height: 10vh;
+}
+
+.dot{
+    height: 3vh;
 }
 
 @font-face {
@@ -91,6 +108,7 @@ body {
 header{
     height: 100vh;
     background-image: url(main-background.jpg);
+    background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
 
@@ -128,11 +146,20 @@ nav {
 }
 
 button{
-    color: white;
     font-family: Primitive;
     background-color: transparent;
-    font-size: 2rem;
     border: none;
+    padding: 0;
+    color: white;
+}
+
+a{
+    color: white;
+}
+
+.nav-button{
+    color: white;
+    font-size: 2rem;
     padding: 1vh;
 }
 
@@ -144,14 +171,14 @@ button{
 
 .content{
     padding: 5vh;
+}
+
+#greeting{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
     gap: 5vh;
-}
-
-#about{
     background-color: var(--eerie-black);
 }
 
@@ -168,6 +195,70 @@ button{
     width: 20vw;
 }
 
+#about{
+    background-color: var(--dim-gray);
+}
+
+.flex-wrapper{
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 10vh;
+    display: flex;
+    justify-content: flex-start;
+}
+
+#exterior-img, #poison-img{
+    height: 45vh;
+}
+
+.sidetext-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+}
+
+.expand-info{
+    color: white;
+    font-size: 1.5rem;
+}
+
+#menu{
+    background-color: var(--licorice);
+}
+
+#events{
+    background-color: var(--eerie-black);
+}
+
+#reservations{
+    height: 30vh;
+    background-image: url(booking-background.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+}
+
+.flex-wrapper.reservation-wrapper{
+    height: 100%;
+    gap: 1vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+footer > p{
+    font-size: 1rem;
+    max-width: 1400px;
+    margin: auto;
+    text-align: center;
+}
 /* ! Scroll query on freepik returns some decent results */
 /* ! Hand drawn ribbon */
 /* ! text divider */

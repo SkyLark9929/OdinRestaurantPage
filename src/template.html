@@ -11,14 +11,14 @@
             <div class="logo">The Crooked Broom</div>
             <img src="divider.svg" alt="divider" class="divider">
             <nav>
-                <button>Home</button>
-                <button>Menu</button>
-                <button>Events</button>
-                <button>About</button>
+                <button class="nav-button">Home</button>
+                <button class="nav-button">Menu</button>
+                <button class="nav-button">Events</button>
+                <button class="nav-button">Reservations</button>
             </nav>
         </div>
     </header>
-    <div class="content" id="about">
+    <div class="content" id="greeting">
         <h1 class="welcome-hdr">Welcome to The Crooked Broom</h1>
         <img src="./broom.svg" alt="broom" class="broom">
         <p class="welcome-psg">Step into a world where every dish is crafted with enchantment and every sip holds a hint of mystery. 
@@ -33,44 +33,74 @@
             Dine with us and discover flavors beyond this realm—what magic will you taste tonight?
         </p>
     </div>
-    <div class="content">
-        <h1 class="welcome-hdr">Welcome to The Crooked Broom</h1>
-        <p class="welcome-psg">Step into a world where every dish is crafted with enchantment and every sip holds a hint of mystery. 
-            Hidden from the eyes of the ordinary, The Crooked Broom is a gathering place for witches, wizards, 
-            and magical folk seeking a feast beyond the mundane.<br>
-
-            Savor spellbinding dishes, sip handcrafted elixirs, 
-            and immerse yourself in an atmosphere where candlelight flickers with unseen whispers. 
-            Whether you’re here for a quiet potion by the fire or a grand banquet under an enchanted ceiling, 
-            magic is always on the menu.<br>
-            
-            Dine with us and discover flavors beyond this realm—what magic will you taste tonight?</p>
+    <div class="content" id="about">
+        <div class="flex-wrapper">
+            <img src="old-exterior.svg" alt="restaurant-exterior" id="exterior-img" class="side-img">
+            <div class="sidetext-wrapper">
+                <h2>More than a thousand years of history</h2>
+                <p>Founded in VII century in the heart of Eldermyst Woods by potion master Elowen Nightshade,
+                    The Crooked Broom soon became a legendary haven for witches and wizards seeking enchanted cuisine. 
+                    <br>Over the centuries, it has welcomed renowned guests such as Merlin, Morgana Le Fay, and the elusive alchemist Nicolas Flamel. 
+                    Event today, hidden from non-magical eyes, The Crooked Broom offers warmth and wonder to all who enter.
+                </p>
+                <button class="expand-info" id="learn-more">Click to learn more</button>
+            </div>
+        </div>
     </div>
-    <div class="content1">
-        <h1 class="welcome-hdr">Welcome to The Crooked Broom</h1>
-        <p class="welcome-psg">Step into a world where every dish is crafted with enchantment and every sip holds a hint of mystery. 
-            Hidden from the eyes of the ordinary, The Crooked Broom is a gathering place for witches, wizards, 
-            and magical folk seeking a feast beyond the mundane.<br>
-
-            Savor spellbinding dishes, sip handcrafted elixirs, 
-            and immerse yourself in an atmosphere where candlelight flickers with unseen whispers. 
-            Whether you’re here for a quiet potion by the fire or a grand banquet under an enchanted ceiling, 
-            magic is always on the menu.<br>
-            
-            Dine with us and discover flavors beyond this realm—what magic will you taste tonight?</p>
+    <div class="content" id="menu">
+        <div class="flex-wrapper">
+            <div class="sidetext-wrapper">
+                <h2>Choose your poison</h2>
+                <ul>
+                    <li><img class="dot" src="skull.png" alt=""><p>
+                        Potions – A selection of bubbling brews, from the invigorating Elixir of Eternal Wakefulness
+                        to the mysteriously smoky Shadowmist Tonic.
+                    </p>
+                    </li>
+                    <li><img class="dot" src="skull.png" alt=""><p>Deadly Delicious Stews – Try our signature Phoenix Ember Stew or the rich Witch’s 
+                        Bane Broth—both perfectly safe... probably.
+                    </p>
+                    </li>
+                    <li><img class="dot" src="skull.png" alt=""><p>Cursedly Good Confections – The Moonlit Truffle Pie and Sweet Sin Apple Tart might 
+                        just enchant your taste buds forever.
+                    </p>
+                    </li>
+                </ul>
+                <p>Rest assured, our magic is well-measured. Unless, of course, you ask for a little extra danger.</p>
+                <button class="expand-info" id="learn-more">Checkout the menu</button>
+            </div>
+            <img src="poison.svg" alt="poison" id="poison-img" class="side-img">
+        </div>
     </div>
-    <div class="content2">
-        <h1 class="welcome-hdr">Welcome to The Crooked Broom</h1>
-        <p class="welcome-psg">Step into a world where every dish is crafted with enchantment and every sip holds a hint of mystery. 
-            Hidden from the eyes of the ordinary, The Crooked Broom is a gathering place for witches, wizards, 
-            and magical folk seeking a feast beyond the mundane.<br>
+    <div class="content" id="events">
+        <div class="flex-wrapper">
+            <img src="pumpkin.svg" alt="pumpkin" id="pumkpin-img" class="side-img">
+            <div class="sidetext-wrapper">
+                <h2>Celebrate the Magic of the Seasons</h2>
+                <p>Step into the warmth of The Crooked Broom and join us in celebrating the most enchanting holidays 
+                    of the year! From the flickering lights of Solstice Eve to the mischievous mirth of Witch’s Night, 
+                    our hearth is always aglow with festive cheer, hearty feasts, and spellbinding brews.<br>
 
-            Savor spellbinding dishes, sip handcrafted elixirs, 
-            and immerse yourself in an atmosphere where candlelight flickers with unseen whispers. 
-            Whether you’re here for a quiet potion by the fire or a grand banquet under an enchanted ceiling, 
-            magic is always on the menu.<br>
-            
-            Dine with us and discover flavors beyond this realm—what magic will you taste tonight?</p>
+                    Raise a toast on Mage’s Moon, savor seasonal delicacies during Harvest of Charms, 
+                    or gather with friends for a night of stories and enchantments on The Veil’s Thinning. No matter the occasion, 
+                    you’ll find warmth, wonder, and a table set for magic.
+                </p>
+                <button class="expand-info" id="learn-more">Click to see scheduled events</button>
+            </div>
+        </div>
     </div>
+    <div class="content" id="reservations">
+        <div class="flex-wrapper reservation-wrapper">
+            <h1>Magic awaits!</h1>
+            <p>Reserve your table now and let the feast begin!</p>
+            <button>Reservation</button>
+        </div>
+    </div>
+    <footer>
+        <p>Background images were taken from <a target="_blank" rel="noopener noreferrer" href="https://www.freepik.com">Freepik</a> and were AI-generated. 
+            Hand-drawn images are also from <a target="_blank" rel="noopener noreferrer" href="https://www.freepik.com">Freepik</a>, however, they are not AI-generated.
+            The image of restaurant exterior was generated with Kandinsky 3.1
+        </p>
+    </footer>
 </body>
 </html>
