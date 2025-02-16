@@ -1,0 +1,175 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* end of the reset */
+/* My css starts here */
+:root{
+    /* CSS HEX */
+    --eerie-black: #211F1Aff;
+    --outer-space: #434748ff;
+    --smoky-black: #0C0908ff;
+    --dim-gray: #7B7261ff;
+    --kobicha: #704B22ff;
+    --licorice: #1D160Fff;
+    --night: #100F0Dff;
+}
+
+@font-face {
+    font-family: Primitive;
+    src: url(Primitive.ttf);
+}
+
+@font-face {
+    font-family: Monarchia;
+    src: url(MONARCHI.TTF);
+}
+
+h1{
+    font-family: Primitive;
+    font-size: 4rem;
+}
+
+p{
+    font-family: Primitive;
+    font-size: 2rem;
+}
+
+@font-face {
+    font-family: Blackwood;
+    src: url(Blackwood\ Castle.ttf);
+}
+
+body {
+    color: white;
+}
+
+header{
+    height: 100vh;
+    background-image: url(main-background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-nav-wrapper{
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+
+    padding: 5vh;
+    background-color: #0000007D;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 30px;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+
+    padding-top: 1vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2vw;
+}
+
+button{
+    color: white;
+    font-family: Primitive;
+    background-color: transparent;
+    font-size: 2rem;
+    border: none;
+    padding: 1vh;
+}
+
+
+.logo{
+    font-family: Blackwood;
+    font-size: 8rem;
+}
+
+.content{
+    padding: 5vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5vh;
+}
+
+#about{
+    background-color: var(--eerie-black);
+}
+
+.welcome-hdr,
+.welcome-psg{
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+
+    text-align: center;
+}
+
+.broom{
+    width: 20vw;
+}
+
+/* ! Scroll query on freepik returns some decent results */
+/* ! Hand drawn ribbon */
+/* ! text divider */
+/* ! text divider medieval */
+/* ! text divider halloween */
