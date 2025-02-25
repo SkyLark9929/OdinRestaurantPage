@@ -4,6 +4,11 @@ import descriptions from './long_texts.json' assert {type: 'json'}
 const body = document.querySelector('body');
 
 function createHeader(){
+<<<<<<< HEAD
+=======
+
+    // Header with logo and menu
+>>>>>>> 6b4a74107fcd5c3092fc19093b966413267c52fc
     const buttonNames = ['Home', 'Menu', 'Events', 'Reservations'];
     const buttonArray = []; // Here we will store nav buttons which later return to the DOM manipulator
 
