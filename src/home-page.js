@@ -1,14 +1,10 @@
-import dividerImage from './divider.svg'
-import broomImage from './broom.svg'
-import descriptions from './long_texts.json' assert {type: 'json'}
+import dividerImage from './divider.svg';
+import broomImage from './broom.svg';
+import exteriorImage from './old-exterior.svg';
+import descriptions from './long_texts.json' assert {type: 'json'};
 const body = document.querySelector('body');
 
 function createHeader(){
-<<<<<<< HEAD
-=======
-
-    // Header with logo and menu
->>>>>>> 6b4a74107fcd5c3092fc19093b966413267c52fc
     const buttonNames = ['Home', 'Menu', 'Events', 'Reservations'];
     const buttonArray = []; // Here we will store nav buttons which later return to the DOM manipulator
 
@@ -66,19 +62,55 @@ function createWelcome(){
     welcomeDiv.append(welcomePsg);
 };
 
+function createAbout(){
+    const about = document.createElement('div');
+    about.classList.add('content');
+    about.id = 'about';
+    body.appendChild(about);
+    
+    const flexWrapper = document.createElement('div');
+    flexWrapper.classList.add('flex-wrapper');
+    about.appendChild(flexWrapper);
+    
+    const exteriorImg = document.createElement('img');
+    exteriorImg.classList.add('side-img');
+    exteriorImg.id = 'exterior-img';
+    exteriorImg.alt = 'restaurant-exterior';
+    exteriorImg.src = exteriorImage;
+    flexWrapper.appendChild(exteriorImg);
+
+    const sideTextWrapper = document.createElement('div')
+    sideTextWrapper.classList.add('sidetext-wrapper');
+    flexWrapper.appendChild(sideTextWrapper);
+
+    const historyHeader = document.createElement('h2');
+    historyHeader.textContent = 'More than a thousand years of history';
+    sideTextWrapper.appendChild(historyHeader);
+
+    const restaurantHistory = document.createElement('p');
+    restaurantHistory.textContent = getDescriptionByClass('about');
+    sideTextWrapper.appendChild(restaurantHistory);
+
+    const expandBtn = document.createElement('button');
+    expandBtn.classList.add('expand-info');
+    expandBtn.id = 'learn-more';
+    expandBtn.textContent = 'Click to learn more';
+    sideTextWrapper.appendChild(expandBtn);
+};
+
 function getDescriptionByClass(className){
     for(let description of descriptions){
         if(description.class == className){
             return description.text;
-        } else {
-            return 'Failed to fetch description';
         };
     };
+    return 'Failed to fetch description';
 };
 
 function createHomePage(){
     createHeader();
     createWelcome();
+    createAbout();
 };
 
 export {createHomePage};
