@@ -1,7 +1,9 @@
-import dividerImage from'./divider.svg'
+import dividerImage from './divider.svg'
+import broomImage from './broom.svg'
+import descriptions from './long_texts.json' assert {type: 'json'}
+const body = document.querySelector('body');
 
 function createHeader(){
-    const body = document.querySelector('body');
 
     // Header with logo and menu
     const buttonNames = ['Home', 'Menu', 'Events', 'Reservations'];
@@ -38,8 +40,42 @@ function createHeader(){
     };
 };
 
+function createWelcome(){
+    const welcomeDiv = document.createElement('div');
+    welcomeDiv.classList.add('content');
+    welcomeDiv.id = 'greeting';
+    body.appendChild(welcomeDiv);
+
+    const welcomeHeader = document.createElement('h1');
+    welcomeHeader.classList.add('welcome-hdr');
+    welcomeHeader.textContent = 'Welcome to The Crooked Broom';
+    welcomeDiv.appendChild(welcomeHeader);
+
+    const broomImg = document.createElement('img');
+    broomImg.src = broomImage;
+    broomImg.alt = 'broom';
+    broomImg.classList.add('broom');
+    welcomeDiv.appendChild(broomImg);
+
+    const welcomePsg = document.createElement('p');
+    welcomePsg.classList.add('welcome-psg');
+    welcomePsg.textContent = getDescriptionByClass('welcome-psg');
+    welcomeDiv.append(welcomePsg);
+};
+
+function getDescriptionByClass(className){
+    for(let description of descriptions){
+        if(description.class == className){
+            return description.text;
+        } else {
+            return 'Failed to fetch description';
+        };
+    };
+};
+
 function createHomePage(){
-    createHeader()
+    createHeader();
+    createWelcome();
 };
 
 export {createHomePage};

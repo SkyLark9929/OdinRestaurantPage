@@ -105,6 +105,10 @@ body {
     color: white;
 }
 
+p{
+    white-space: pre-line;
+}
+
 header{
     height: 100vh;
     background-image: url(main-background.jpg);
