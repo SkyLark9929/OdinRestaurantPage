@@ -197,6 +197,30 @@ function createEvents(){
     sideTextWrapper.appendChild(expandBtn);
 };
 
+function createReservations(){
+    const reservationsContent = document.createElement('div');
+    reservationsContent.classList.add('content');
+    reservationsContent.id = 'reservations';
+    body.appendChild(reservationsContent);
+
+    const flexWrapper = document.createElement('div');
+    flexWrapper.classList.add('flex-wrapper');
+    flexWrapper.classList.add('reservation-wrapper');
+    reservationsContent.appendChild(flexWrapper);
+
+    const reservationHeader = document.createElement('h1');
+    reservationHeader.textContent = 'Magic awaits!';
+    flexWrapper.appendChild(reservationHeader);
+
+    const reservationPromo = document.createElement('p');
+    reservationPromo.textContent = 'Reserve your table now and let the feast begin!';
+    flexWrapper.appendChild(reservationPromo);
+
+    const expandBtn = document.createElement('button');
+    expandBtn.textContent = 'Reservation';
+    flexWrapper.appendChild(expandBtn);
+};
+
 function getDescriptionByClass(className){
     for(let description of descriptions){
         if(description.class == className){
@@ -208,9 +232,11 @@ function getDescriptionByClass(className){
 
 function createHomePage(){
     createHeader();
-    createWelcome();    createAbout();
+    createWelcome();    
+    createAbout();
     createMenu();
     createEvents();
+    createReservations();
 };
 
 export {createHomePage};
