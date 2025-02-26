@@ -2,6 +2,9 @@ import dividerImage from './divider.svg';
 import broomImage from './broom.svg';
 import exteriorImage from './old-exterior.svg';
 import descriptions from './long_texts.json' assert {type: 'json'};
+import skullDot from './skull.png';
+import poisonImg from './poison.svg';
+import pumpkinImage from './pumpkin.svg';
 const body = document.querySelector('body');
 
 function createHeader(){
@@ -98,6 +101,102 @@ function createAbout(){
     sideTextWrapper.appendChild(expandBtn);
 };
 
+function createMenu(){
+    const menuContent = document.createElement('div');
+    menuContent.classList.add('content');
+    menuContent.id = 'menu';
+    body.appendChild(menuContent);
+
+    const flexWrapper = document.createElement('div');
+    flexWrapper.classList.add('flex-wrapper');
+    menuContent.appendChild(flexWrapper);
+
+    const sideTextWrapper = document.createElement('div');
+    sideTextWrapper.classList.add('sidetext-wrapper');
+    flexWrapper.appendChild(sideTextWrapper);
+
+    const menuHeader = document.createElement('h2');
+    menuHeader.textContent = 'Choose your poison';
+    sideTextWrapper.appendChild(menuHeader);
+
+    const list = document.createElement('ul');
+    sideTextWrapper.appendChild(list);
+
+    const liPotions = document.createElement('li');
+    list.appendChild(liPotions);
+    const dot = document.createElement('img');
+    dot.classList.add('dot');
+    dot.src = skullDot;
+    liPotions.appendChild(dot.cloneNode(true));
+    const liText = document.createElement('p');
+    liText.textContent = "Potions – A selection of bubbling brews, from the invigorating Elixir of Eternal Wakefulness to the mysteriously smoky Shadowmist Tonic."
+    liPotions.appendChild(liText.cloneNode(true));
+
+    const liStews = document.createElement('li');
+    list.appendChild(liStews);
+    liStews.appendChild(dot.cloneNode(true));
+    liText.textContent = "Deadly Delicious Stews – Try our signature Phoenix Ember Stew or the rich Witch’s Bane Broth—both perfectly safe... probably."
+    liStews.appendChild(liText.cloneNode(true));
+
+    const liConfections = document.createElement('li')
+    list.appendChild(liConfections);
+    liConfections.appendChild(dot.cloneNode(true));
+    liText.textContent = 'Cursedly Good Confections – The Moonlit Truffle Pie and Sweet Sin Apple Tart might just enchant your taste buds forever.'
+    liConfections.appendChild(liText.cloneNode(true));
+
+    const conclusion = document.createElement('p');
+    conclusion.textContent = 'Rest assured, our magic is well-measured. Unless, of course, you ask for a little extra danger.'
+    sideTextWrapper.appendChild(conclusion);
+
+    const expandBtn = document.createElement('button');
+    expandBtn.classList.add('expand-info');
+    expandBtn.id = 'learn-more';
+    expandBtn.textContent = 'Checkout the menu';
+    sideTextWrapper.appendChild(expandBtn);
+
+    const poisonImage = document.createElement('img');
+    poisonImage.alt = 'poison';
+    poisonImage.id = 'poison-img';
+    poisonImage.src = poisonImg;
+    poisonImage.classList.add('side-img');
+    flexWrapper.appendChild(poisonImage);
+};
+
+function createEvents(){
+    const eventsContent = document.createElement('div');
+    eventsContent.classList.add('content');
+    eventsContent.id = 'events';
+    body.appendChild(eventsContent);
+
+    const flexWrapper = document.createElement('div');
+    flexWrapper.classList.add('flex-wrapper');
+    eventsContent.appendChild(flexWrapper);
+
+    const pumpkinImg = document.createElement('img');
+    pumpkinImg.alt = 'pumpkin';
+    pumpkinImg.id = 'pumpkin-img';
+    pumpkinImg.classList.add('side-img');
+    pumpkinImg.src = pumpkinImage;
+    flexWrapper.appendChild(pumpkinImg);
+
+    const sideTextWrapper = document.createElement('div');
+    sideTextWrapper.classList.add('sidetext-wrapper');
+    flexWrapper.appendChild(sideTextWrapper);
+
+    const eventsHeader = document.createElement('h2');
+    eventsHeader.textContent = 'Celebrate the Magic of the Seasons';
+    sideTextWrapper.appendChild(eventsHeader);
+
+    const eventsDescription = document.createElement('p');
+    eventsDescription.textContent = getDescriptionByClass('events')
+    sideTextWrapper.appendChild(eventsDescription);
+
+    const expandBtn = document.createElement('button');
+    expandBtn.textContent = 'Click to see scheduled events';
+    expandBtn.classList.add('expand-info');
+    sideTextWrapper.appendChild(expandBtn);
+};
+
 function getDescriptionByClass(className){
     for(let description of descriptions){
         if(description.class == className){
@@ -109,8 +208,9 @@ function getDescriptionByClass(className){
 
 function createHomePage(){
     createHeader();
-    createWelcome();
-    createAbout();
+    createWelcome();    createAbout();
+    createMenu();
+    createEvents();
 };
 
 export {createHomePage};

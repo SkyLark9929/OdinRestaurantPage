@@ -24,8 +24,8 @@ module.exports = {
                 loader: "html-loader",
             },
             {
-                test: /\.(png|svg|jpg|jpeg|gif)$/i,
-                use: 'url-loader?mimetype=image/png',
+                test: /\.(png|jpg|svg|gif)$/i,
+                use: 'url-loader',
             }
         ],
     },
