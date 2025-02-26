@@ -24,7 +24,7 @@ module.exports = {
                 loader: "html-loader",
             },
             {
-                test: /\.(png|jpg|svg|gif)$/i,
+                test: /\.(png|svg)$/i, // if i mention jpg here it will not let the css loader properly load the background image
                 use: 'url-loader',
             }
         ],
