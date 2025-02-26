@@ -251,4 +251,4 @@ function createHomePage(){
     createFooter();
 };
 
-export {createHomePage};
+export {createHomePage, createFooter};
