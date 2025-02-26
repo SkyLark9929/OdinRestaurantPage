@@ -230,6 +230,17 @@ function getDescriptionByClass(className){
     return 'Failed to fetch description';
 };
 
+function createFooter(){
+    const footer = document.createElement('footer');
+    body.appendChild(footer);
+
+    const footerP = document.createElement('p');
+    footerP.innerHTML = `This website is a task for The Odin Project. It is not in any way associated with real brand or company.
+            Background images were taken from <a target="_blank" rel="noopener noreferrer" href="https://www.freepik.com">Freepik</a> and were AI-generated. 
+            Hand-drawn images are also from <a target="_blank" rel="noopener noreferrer" href="https://www.freepik.com">Freepik</a>, however, they are not AI-generated.`;
+    footer.appendChild(footerP);
+};
+
 function createHomePage(){
     createHeader();
     createWelcome();    
@@ -237,6 +248,7 @@ function createHomePage(){
     createMenu();
     createEvents();
     createReservations();
+    createFooter();
 };
 
 export {createHomePage};
