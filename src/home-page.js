@@ -63,7 +63,8 @@ function createAbout(){
     body.appendChild(about);
     
     const flexWrapper = document.createElement('div');
-    flexWrapper.classList.add('flex-wrapper');
+    flexWrapper.classList.add('wrapper');
+    flexWrapper.classList.add('flex-start');
     about.appendChild(flexWrapper);
     
     const exteriorImg = document.createElement('img');
@@ -99,7 +100,8 @@ function createMenu(){
     body.appendChild(menuContent);
 
     const flexWrapper = document.createElement('div');
-    flexWrapper.classList.add('flex-wrapper');
+    flexWrapper.classList.add('wrapper');
+    flexWrapper.classList.add('flex-start');
     menuContent.appendChild(flexWrapper);
 
     const sideTextWrapper = document.createElement('div');
@@ -160,7 +162,8 @@ function createEvents(){
     body.appendChild(eventsContent);
 
     const flexWrapper = document.createElement('div');
-    flexWrapper.classList.add('flex-wrapper');
+    flexWrapper.classList.add('wrapper');
+    flexWrapper.classList.add('flex-start');
     eventsContent.appendChild(flexWrapper);
 
     const pumpkinImg = document.createElement('img');
@@ -195,7 +198,8 @@ function createReservations(){
     body.appendChild(reservationsContent);
 
     const flexWrapper = document.createElement('div');
-    flexWrapper.classList.add('flex-wrapper');
+    flexWrapper.classList.add('wrapper');
+    flexWrapper.classList.add('flex-start');
     flexWrapper.classList.add('reservation-wrapper');
     reservationsContent.appendChild(flexWrapper);
 

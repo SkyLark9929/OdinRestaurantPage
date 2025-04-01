@@ -203,10 +203,13 @@ a{
     background-color: var(--dim-gray);
 }
 
-.flex-wrapper{
+.wrapper{
     max-width: 1400px;
     margin-left: auto;
     margin-right: auto;
+}
+
+.flex-start {
     gap: 10vh;
     display: flex;
     justify-content: flex-start;
