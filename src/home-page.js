@@ -5,10 +5,10 @@ import descriptions from './long_texts.json' assert {type: 'json'};
 import skullDot from './skull.png';
 import poisonImg from './poison.svg';
 import pumpkinImage from './pumpkin.svg';
+import { createFooter, createNavbar } from './sharedFunctions';
 const body = document.querySelector('body');
 
 function createHeader(){
-    const buttonNames = ['Home', 'Menu', 'Events', 'Reservations'];
     const buttonArray = []; // Here we will store nav buttons which later return to the DOM manipulator
 
     const header = document.createElement('header');
@@ -29,17 +29,8 @@ function createHeader(){
     divider.classList.add('divider');
     logoNavWrapper.appendChild(divider);
 
-    const nav = document.createElement('nav');
+    const nav = createNavbar();
     logoNavWrapper.appendChild(nav);
-
-    for(let name of buttonNames){
-        let button = document.createElement('button');
-        button.classList.add('nav-button');
-        button.textContent = name;
-        nav.appendChild(button);
-
-        buttonArray.push(button);
-    };
 };
 
 function createWelcome(){
@@ -230,17 +221,6 @@ function getDescriptionByClass(className){
     return 'Failed to fetch description';
 };
 
-function createFooter(){
-    const footer = document.createElement('footer');
-    body.appendChild(footer);
-
-    const footerP = document.createElement('p');
-    footerP.innerHTML = `This website is a task for The Odin Project. It is not in any way associated with real brand or company.
-            Background images were taken from <a target="_blank" rel="noopener noreferrer" href="https://www.freepik.com">Freepik</a> and were AI-generated. 
-            Hand-drawn images are also from <a target="_blank" rel="noopener noreferrer" href="https://www.freepik.com">Freepik</a>, however, they are not AI-generated.`;
-    footer.appendChild(footerP);
-};
-
 function createHomePage(){
     createHeader();
     createWelcome();    
@@ -248,7 +228,10 @@ function createHomePage(){
     createMenu();
     createEvents();
     createReservations();
-    createFooter();
+    (() => {
+        const footer = createFooter();
+        body.appendChild(footer);
+    });
 };
 
 export {createHomePage, createFooter};
