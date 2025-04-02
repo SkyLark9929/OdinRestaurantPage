@@ -61,7 +61,7 @@ table {
 
 @font-face {
     font-family: Primitive;
-    src: url(Primitive.ttf);
+    src: url(./fonts/Primitive.ttf);
 }
 
 h1{
@@ -98,7 +98,7 @@ footer{
 
 @font-face {
     font-family: Blackwood;
-    src: url(Blackwood\ Castle.ttf);
+    src: url(./fonts/Blackwood\ Castle.ttf);
 }
 
 body {
@@ -111,7 +111,7 @@ p{
 
 header{
     height: 100vh;
-    background-image: url(main-background.jpg);
+    background-image: url(./images/main-background.jpg);
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
@@ -173,6 +173,11 @@ a{
     font-size: 8rem;
 }
 
+.page-header{
+    font-family: Primitive;
+    font-size: 10rem;
+}
+
 .content{
     padding: 5vh;
 }
@@ -215,6 +220,11 @@ a{
     justify-content: flex-start;
 }
 
+.flex-center {
+    display: flex;
+    justify-content: center;
+}
+
 #exterior-img, #poison-img{
     height: 45vh;
 }
@@ -241,7 +251,7 @@ a{
 
 #reservations{
     height: 30vh;
-    background-image: url(booking-background.jpg);
+    background-image: url(./images/booking-background.jpg);
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;

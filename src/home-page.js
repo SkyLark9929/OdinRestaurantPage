@@ -1,11 +1,11 @@
-import dividerImage from './divider.svg';
-import broomImage from './broom.svg';
-import exteriorImage from './old-exterior.svg';
-import descriptions from './long_texts.json' assert {type: 'json'};
-import skullDot from './skull.png';
-import poisonImg from './poison.svg';
-import pumpkinImage from './pumpkin.svg';
-import { createFooter, createNavbar } from './sharedFunctions';
+import dividerImage from './images/divider.svg';
+import broomImage from './images/broom.svg';
+import exteriorImage from './images/old-exterior.svg';
+import descriptions from './json/long_texts.json' assert {type: 'json'};
+import skullDot from './images/skull.png';
+import poisonImg from './images/poison.svg';
+import pumpkinImage from './images/pumpkin.svg';
+import { createFooter, createNavbar, eraseElementContent } from './sharedFunctions';
 const body = document.querySelector('body');
 
 function createHeader(){
@@ -223,17 +223,20 @@ function getDescriptionByClass(className){
     return 'Failed to fetch description';
 };
 
+function appendFooter(){
+    const footer = createFooter();
+    body.appendChild(footer);
+}
+
 function createHomePage(){
+    eraseElementContent(body);
     createHeader();
     createWelcome();    
     createAbout();
     createMenu();
     createEvents();
     createReservations();
-    (() => {
-        const footer = createFooter();
-        body.appendChild(footer);
-    });
+    appendFooter();
 };
 
 export {createHomePage, createFooter};
