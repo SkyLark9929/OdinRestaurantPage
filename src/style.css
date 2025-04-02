@@ -252,7 +252,7 @@ footer{
     justify-content: center;
 }
 
-.flex-wrapper.reservation-wrapper{
+.reservation-wrapper{
     height: 100%;
     max-width: 1200px;
     gap: 1vh;
@@ -264,7 +264,7 @@ footer{
     border-radius: 10px;
 }
 
-.flex-wrapper.reservation-wrapper > button {
+.reservation-wrapper > button {
     border: 2px solid white;
     border-radius: 5px;
     padding: 1vh;

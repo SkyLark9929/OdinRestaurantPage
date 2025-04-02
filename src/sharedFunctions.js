@@ -1,3 +1,5 @@
+import { createMenuPage } from "./menu";
+
 function changeBackground(element, color){
     element.style.backgroundColor = color;
 };
@@ -7,14 +9,31 @@ function eraseElementContent(element){
 };
 
 function createNavbar(){
-    const buttonNames = ['Home', 'Menu', 'Events', 'Reservations'];
+    const buttonNames = [
+        {
+            name: 'Home',
+        }, 
+        {
+            name: 'Menu',
+            function: createMenuPage
+        }, 
+        {
+            name: 'Events',
+        }, 
+        {
+            name: 'Reservations'
+        }
+    ];
     const nav = document.createElement('nav');
 
-    for(let name of buttonNames){
+    for(let entry of buttonNames){
         let button = document.createElement('button');
         button.classList.add('nav-button');
-        button.textContent = name;
+        button.textContent = entry.name;
         nav.appendChild(button);
+        if(entry.function){
+            button.addEventListener('click', entry.function);
+        };
     };
 
     return nav;

@@ -9,8 +9,6 @@ import { createFooter, createNavbar } from './sharedFunctions';
 const body = document.querySelector('body');
 
 function createHeader(){
-    const buttonArray = []; // Here we will store nav buttons which later return to the DOM manipulator
-
     const header = document.createElement('header');
     body.appendChild(header);
 
