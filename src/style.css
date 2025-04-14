@@ -221,9 +221,12 @@ a{
 }
 
 .flex-center-column {
+.flex-center-column {
     display: flex;
     flex-direction: column;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     align-items: center;
 }
 
