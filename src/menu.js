@@ -1,4 +1,5 @@
 import { changeBackground, createNavbar, eraseElementContent } from "./sharedFunctions";
+import boneSVG from './images/hand-drawn-bone.svg'
 const body = document.querySelector('body');
 const bodyBackgroundColor = '#1D160F';
 
@@ -10,13 +11,19 @@ function createNav(){
 function createMenuHeader(){
     const wrapper = document.createElement('div');
     wrapper.classList.add('wrapper');
-    wrapper.classList.add('flex-center');
+    wrapper.classList.add('flex-center-column');
     body.appendChild(wrapper);
 
     const menuHeader = document.createElement('h1');
     menuHeader.classList.add('page-header');
     menuHeader.textContent = 'Menu';
     wrapper.appendChild(menuHeader);
+
+    const boneImg = document.createElement('img');
+    boneImg.src = boneSVG;
+    boneImg.alt = 'bone';
+    boneImg.id = 'bone';
+    wrapper.appendChild(boneImg);
 };
 
 
