@@ -220,9 +220,11 @@ a{
     justify-content: flex-start;
 }
 
-.flex-center {
+.flex-center-column {
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 
 #exterior-img, #poison-img{
@@ -286,4 +288,8 @@ footer > p{
     max-width: 1400px;
     margin: auto;
     text-align: center;
+}
+
+#bone {
+    width: 40vw;
 }
