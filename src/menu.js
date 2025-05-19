@@ -1,5 +1,6 @@
 import { changeBackground, createNavbar, eraseElementContent } from "./sharedFunctions";
 import boneSVG from './images/hand-drawn-bone.svg';
+import dividerImage from './images/divider.svg';
 import dishes from './json/menu_dishes_list.json' assert {type: 'json'};
 import skullDot from './images/skull.png';
 const body = document.querySelector('body');
@@ -40,6 +41,12 @@ function createMenuContents(){
         const menuSectionHeader = document.createElement('h2');
         menuSectionHeader.textContent = category.name;
         wrapper.appendChild(menuSectionHeader);
+
+        const divider = document.createElement('img');
+        divider.src = dividerImage;
+        divider.alt = 'divider';
+        divider.classList.add('divider');
+        wrapper.appendChild(divider);
 
         const dishList = document.createElement('ul');
         dishList.classList.add('flex-start-column');
