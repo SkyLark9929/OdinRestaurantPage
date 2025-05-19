@@ -61,7 +61,6 @@ function createMenuContents(){
             dishDot.classList.add('dot');
             dishDot.src = skullDot;
             dishDot.style.gridArea = 'bp';
-            dishDot.style.justifySelf = 'end';
             dishElement.appendChild(dishDot);
 
             const dishName = document.createElement('h3');

@@ -97,7 +97,8 @@ p, li{
 }
 
 li{
-    margin: 2.75vh;
+    margin-top: 2.75vh;
+    margin-bottom: 2.75vh;
     gap: 2vh;
 }
 
@@ -260,7 +261,7 @@ a{
 .menu-dish-grid{
     display: grid;
     width: 100%;
-    grid-template-columns: 1fr 12fr 1fr;
+    grid-template-columns: 1fr 22fr 1fr;
     grid-template-areas: 'bp nm pr'
                          'ph ds ds';
     overflow: hidden;
