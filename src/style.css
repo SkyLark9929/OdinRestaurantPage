@@ -33,6 +33,7 @@ body {
 }
 ol, ul {
 	list-style: none;
+    margin-bottom: 3vh;
 }
 blockquote, q {
 	quotes: none;
@@ -82,6 +83,7 @@ h1{
 h2{
     font-family: Blackwood;
     font-size: 3rem;
+    margin: 2.75vh;
 }
 
 h3{
@@ -95,7 +97,7 @@ p, li{
 }
 
 li{
-    margin: 2vh;
+    margin: 2.75vh;
     gap: 2vh;
 }
 
