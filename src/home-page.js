@@ -76,7 +76,7 @@ function createAbout(){
     sideTextWrapper.classList.add('sidetext-wrapper');
     flexWrapper.appendChild(sideTextWrapper);
 
-    const historyHeader = document.createElement('h2');
+    const historyHeader = document.createElement('h1');
     historyHeader.textContent = 'More than a thousand years of history';
     sideTextWrapper.appendChild(historyHeader);
 
@@ -106,7 +106,7 @@ function createMenu(){
     sideTextWrapper.classList.add('sidetext-wrapper');
     flexWrapper.appendChild(sideTextWrapper);
 
-    const menuHeader = document.createElement('h2');
+    const menuHeader = document.createElement('h1');
     menuHeader.textContent = 'Choose your poison';
     sideTextWrapper.appendChild(menuHeader);
 
@@ -178,7 +178,7 @@ function createEvents(){
     sideTextWrapper.classList.add('sidetext-wrapper');
     flexWrapper.appendChild(sideTextWrapper);
 
-    const eventsHeader = document.createElement('h2');
+    const eventsHeader = document.createElement('h1');
     eventsHeader.textContent = 'Celebrate the Magic of the Seasons';
     sideTextWrapper.appendChild(eventsHeader);
 

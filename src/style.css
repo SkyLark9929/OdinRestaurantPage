@@ -60,23 +60,38 @@ table {
 }
 
 @font-face {
+    font-family: Blackwood;
+    src: url(./fonts/Blackwood\ Castle.ttf);
+}
+
+@font-face {
     font-family: Primitive;
     src: url(./fonts/Primitive.ttf);
 }
 
+@font-face {
+    font-family: Fell;
+    src: url(./fonts/Fell.ttf);
+}
+
 h1{
-    font-family: Primitive;
+    font-family: Blackwood;
     font-size: 4rem;
 }
 
 h2{
-    font-family: Primitive;
+    font-family: Blackwood;
     font-size: 3rem;
+}
+
+h3{
+    font-family: Blackwood;
+    font-size: 2rem;
 }
 
 p, li{
     font-family: Primitive;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
 }
 
 li{
@@ -171,7 +186,7 @@ a{
 }
 
 .page-header{
-    font-family: Primitive;
+    font-family: Blackwood;
     font-size: 10rem;
 }
 
@@ -206,7 +221,7 @@ a{
 }
 
 .wrapper{
-    max-width: 1400px;
+    max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -303,7 +318,7 @@ footer{
 
 footer > p{
     font-size: 1rem;
-    max-width: 1400px;
+    max-width: 1200px;
     margin: auto;
     text-align: center;
 }

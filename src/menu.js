@@ -57,16 +57,16 @@ function createMenuContents(){
             dishDot.style.justifySelf = 'end';
             dishElement.appendChild(dishDot);
 
-            const dishPrice = document.createElement('p');
-            dishPrice.textContent = dish.price;
-            dishPrice.style.gridArea = 'pr';
-            dishElement.appendChild(dishPrice);
-
             const dishName = document.createElement('h3');
             dishName.textContent = dish.name + ' ' + '.'.repeat(300);
             dishName.classList.add('dish-name');
             dishName.style.gridArea = 'nm';
             dishElement.appendChild(dishName);
+
+            const dishPrice = document.createElement('h3');
+            dishPrice.textContent = dish.price;
+            dishPrice.style.gridArea = 'pr';
+            dishElement.appendChild(dishPrice);
 
             const dishDescription = document.createElement('p');
             dishDescription.textContent = dish.description;
