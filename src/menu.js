@@ -1,5 +1,7 @@
 import { changeBackground, createNavbar, eraseElementContent } from "./sharedFunctions";
-import boneSVG from './images/hand-drawn-bone.svg'
+import boneSVG from './images/hand-drawn-bone.svg';
+import dishes from './json/menu_dishes_list.json' assert {type: 'json'};
+import skullDot from './images/skull.png';
 const body = document.querySelector('body');
 const bodyBackgroundColor = '#1D160F';
 
@@ -12,6 +14,7 @@ function createMenuHeader(){
     const wrapper = document.createElement('div');
     wrapper.classList.add('wrapper');
     wrapper.classList.add('flex-center-column');
+    wrapper.style.maxWidth = '1000px';
     body.appendChild(wrapper);
 
     const menuHeader = document.createElement('h1');
@@ -26,12 +29,59 @@ function createMenuHeader(){
     wrapper.appendChild(boneImg);
 };
 
+function createMenuContents(){
+    const wrapper = document.createElement('div');
+    wrapper.classList.add('wrapper');
+    wrapper.classList.add('flex-center-column');
+    wrapper.style.maxWidth = '1000px';
+    body.appendChild(wrapper);
+
+    for (let category of dishes.categories){
+        const menuSectionHeader = document.createElement('h2');
+        menuSectionHeader.textContent = category.name;
+        wrapper.appendChild(menuSectionHeader);
+
+        const dishList = document.createElement('ul');
+        dishList.classList.add('flex-start-column');
+        wrapper.appendChild(dishList);
+
+        for (let dish of category.items){
+            const dishElement = document.createElement('li');
+            dishList.appendChild(dishElement);
+            dishElement.classList.add('menu-dish-grid');
+
+            const dishDot = document.createElement('img');
+            dishDot.classList.add('dot');
+            dishDot.src = skullDot;
+            dishDot.style.gridArea = 'bp';
+            dishDot.style.justifySelf = 'end';
+            dishElement.appendChild(dishDot);
+
+            const dishPrice = document.createElement('p');
+            dishPrice.textContent = dish.price;
+            dishPrice.style.gridArea = 'pr';
+            dishElement.appendChild(dishPrice);
+
+            const dishName = document.createElement('h3');
+            dishName.textContent = dish.name + ' ' + '.'.repeat(300);
+            dishName.classList.add('dish-name');
+            dishName.style.gridArea = 'nm';
+            dishElement.appendChild(dishName);
+
+            const dishDescription = document.createElement('p');
+            dishDescription.textContent = dish.description;
+            dishDescription.style.gridArea = 'ds';
+            dishElement.appendChild(dishDescription);
+        };
+    };
+};
 
 function createMenuPage(){
     changeBackground(body, bodyBackgroundColor);
     eraseElementContent(body);
     createNav();
     createMenuHeader();
+    createMenuContents();
 };
 
 export {createMenuPage};

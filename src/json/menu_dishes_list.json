@@ -6,31 +6,37 @@
             "items": [
                 {
                     "type": "dish",
+                    "price": "1.00",
                     "name": "Elixir of Eternal Wakefulness",
                     "description": "Rich, spiced coffee with a touch of energizing magic."
                 },
                 {
                     "type": "dish",
+                    "price": "1.00",
                     "name": "Twilight Herbal Tonic ",
                     "description": "A calming blend of moonflower petals, enchanted honey, and elderberry."
                 },
                 {
                     "type": "dish",
+                    "price": "1.00",
                     "name": "Starry Night Cider",
                     "description": "Warm apple cider infused with cinnamon and a sprinkle of stardust"
                 },
                 {
                     "type": "dish",
+                    "price": "1.00",
                     "name": "Faerie Frost Fizz",
                     "description": "A sparkling lavender and elderflower lemonade with a cooling charm"
                 },
                 {
                     "type": "dish",
+                    "price": "1.00",
                     "name": "Moonberry Nectar",
                     "description": "A deep purple blend of enchanted berries with a hint of citrus."
                 },
                 {
                     "type": "dish",
+                    "price": "1.00",
                     "name": "Gilded Goblet",
                     "description": "Golden-hued spiced mead that shimmers in candlelight."
                 }
@@ -42,21 +48,25 @@
             "items": [
                 {
                     "type": "dish",
+                    "price": "1.00",
                     "name": "Mystic Hearthbread",
                     "description": "Freshly baked rolls infused with rosemary and served with glowing herb butter."
                 },
                 {
                     "type": "dish",
+                    "price": "1.00",
                     "name": "Witch’s Cauldron Soup",
                     "description": "A creamy pumpkin and sage bisque, topped with toasted spell-seeds."
                 },
                 {
                     "type": "dish",
+                    "price": "1.00",
                     "name": "Pixie Puff Pastries",
                     "description": "Delicate, flaky pastries filled with enchanted cheese and forest mushrooms."
                 },
                 {
                     "type": "dish",
+                    "price": "1.00",
                     "name": "Moonlit Brie & Berries",
                     "description": "Soft, warm brie paired with enchanted berries and honeyed walnuts."
                 }
@@ -68,26 +78,31 @@
             "items": [
                 {
                     "type": "dish",
+                    "price": "1.00",
                     "name": "Phoenix Ember Stew",
                     "description": "A fiery blend of root vegetables, smoked meats, and ember-kissed spices."
                 },
                 {
                     "type": "dish",
+                    "price": "1.00",
                     "name": "Eldermyst Forest Pie",
                     "description": "Flaky pastry filled with wild mushrooms, enchanted herbs, and aged cheese."
                 },
                 {
                     "type": "dish",
+                    "price": "1.00",
                     "name": "Hearthstone Roast",
                     "description": "Slow-cooked venison with rosemary, juniper berries, and a whisper of woodland magic."
                 },
                 {
                     "type": "dish",
+                    "price": "1.00",
                     "name": "Seafarer’s Spellfish",
                     "description": "Grilled river trout glazed with a citrus-ginger enchantment."
                 },
                 {
                     "type": "dish",
+                    "price": "1.00",
                     "name": "Sorcerer’s Garden Platter",
                     "description": "A vibrant medley of roasted seasonal vegetables, drizzled with moonflower oil."
                 }
@@ -99,21 +114,25 @@
             "items": [
                 {
                     "type": "dish",
+                    "price": "1.00",
                     "name": "Moonlit Truffle Pie",
                     "description": "Dark chocolate and enchanted berries wrapped in a buttery crust."
                 },
                 {
                     "type": "dish",
+                    "price": "1.00",
                     "name": "Sweet Sin Apple Tart",
                     "description": "Caramelized orchard apples with a hint of cinnamon and vanilla."
                 },
                 {
                     "type": "dish",
+                    "price": "1.00",
                     "name": "Faerie Light Pudding",
                     "description": "A delicate lavender and honey custard that shimmers under candlelight."
                 },
                 {
                     "type": "dish",
+                    "price": "1.00",
                     "name": "Elderflower & Stardust Cake",
                     "description": "A soft sponge cake infused with elderflower and a sprinkle of edible stardust."
                 }

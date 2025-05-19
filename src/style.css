@@ -81,9 +81,6 @@ p, li{
 
 li{
     margin: 2vh;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
     gap: 2vh;
 }
 
@@ -214,24 +211,43 @@ a{
     margin-right: auto;
 }
 
-.flex-start {
+.flex-start_10vh {
     gap: 10vh;
     display: flex;
     justify-content: flex-start;
 }
 
-.flex-center-column {
+.flex-start{
+    display: flex;
+    justify-content: center;
+}
+
 .flex-center-column {
     display: flex;
     flex-direction: column;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    align-items: center;
+}
+
+.flex-start-column {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 #exterior-img, #poison-img{
     height: 45vh;
+}
+
+.menu-dish-grid{
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 12fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 'bp nm pr'
+                         'ph ds ds';
+    overflow: hidden;
 }
 
 .sidetext-wrapper{
@@ -295,4 +311,11 @@ footer > p{
 
 #bone {
     width: 30vw;
+}
+
+.dish-name {
+    width: 100%;
+    justify-self: start;
+    overflow: hidden;
+    text-wrap: nowrap;
 }

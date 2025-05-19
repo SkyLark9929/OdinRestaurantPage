@@ -62,7 +62,7 @@ function createAbout(){
     
     const flexWrapper = document.createElement('div');
     flexWrapper.classList.add('wrapper');
-    flexWrapper.classList.add('flex-start');
+    flexWrapper.classList.add('flex-start_10vh');
     about.appendChild(flexWrapper);
     
     const exteriorImg = document.createElement('img');
@@ -99,7 +99,7 @@ function createMenu(){
 
     const flexWrapper = document.createElement('div');
     flexWrapper.classList.add('wrapper');
-    flexWrapper.classList.add('flex-start');
+    flexWrapper.classList.add('flex-start_10vh');
     menuContent.appendChild(flexWrapper);
 
     const sideTextWrapper = document.createElement('div');
@@ -114,6 +114,7 @@ function createMenu(){
     sideTextWrapper.appendChild(list);
 
     const liPotions = document.createElement('li');
+    liPotions.classList.add('flex-start');
     list.appendChild(liPotions);
     const dot = document.createElement('img');
     dot.classList.add('dot');
@@ -124,12 +125,14 @@ function createMenu(){
     liPotions.appendChild(liText.cloneNode(true));
 
     const liStews = document.createElement('li');
+    liStews.classList.add('flex-start');
     list.appendChild(liStews);
     liStews.appendChild(dot.cloneNode(true));
     liText.textContent = "Deadly Delicious Stews – Try our signature Phoenix Ember Stew or the rich Witch’s Bane Broth—both perfectly safe... probably."
     liStews.appendChild(liText.cloneNode(true));
 
     const liConfections = document.createElement('li')
+    liConfections.classList.add('flex-start');
     list.appendChild(liConfections);
     liConfections.appendChild(dot.cloneNode(true));
     liText.textContent = 'Cursedly Good Confections – The Moonlit Truffle Pie and Sweet Sin Apple Tart might just enchant your taste buds forever.'
@@ -161,7 +164,7 @@ function createEvents(){
 
     const flexWrapper = document.createElement('div');
     flexWrapper.classList.add('wrapper');
-    flexWrapper.classList.add('flex-start');
+    flexWrapper.classList.add('flex-start_10vh');
     eventsContent.appendChild(flexWrapper);
 
     const pumpkinImg = document.createElement('img');
@@ -197,7 +200,7 @@ function createReservations(){
 
     const flexWrapper = document.createElement('div');
     flexWrapper.classList.add('wrapper');
-    flexWrapper.classList.add('flex-start');
+    flexWrapper.classList.add('flex-start_10vh');
     flexWrapper.classList.add('reservation-wrapper');
     reservationsContent.appendChild(flexWrapper);
 
